@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StartPage" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorGreen</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>z
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+
+    </style>
+    <style name="HighlightedDate">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="CalendarDay_Highlighted">
+        <item name="android:background">@color/blue</item>
+    </style>
+    <style name="HighlightedCalendarDay">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CalendarDateTextAppearance">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="CalendarWeekdayTextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CalendarHeaderTextAppearance">
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CalendarTheme" parent="@android:style/Theme.Material.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+
+
+
+</resources>

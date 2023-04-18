@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/design_default_color_on_primary"
+            android:title="Navigation Menu"
+            android:titleTextColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is the main content view" />
+
+    </LinearLayout>
+
+    <!-- The navigation drawer view -->
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Navigation Menu"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_hamburger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hamburger"
+                android:onClick="onBurgerClick" />
+
+            <Button
+                android:id="@+id/btn_cheeseburger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cheeseburger"
+                android:onClick="onBurgerClick" />
+
+            <Button
+                android:id="@+id/btn_veggieburger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veggie Burger"
+                android:onClick="onBurgerClick" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

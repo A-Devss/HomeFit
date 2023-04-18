@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Workouts</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="drawer_layout_description">Navigation drawer</string>
+    <string name="play_button_description">Play video</string>
+    <string name="play_button2"></string>
+
+</resources>
