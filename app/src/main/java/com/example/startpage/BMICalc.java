@@ -42,7 +42,7 @@ public class BMICalc extends AppCompatActivity {
                     double h = Double.parseDouble(height.getText().toString());
                     double bmi = calculateBMI(w, h);
                     String rs = String.format("%.2f",bmi);
-                    result.setText(rs);
+                    result.setText(rs);//sample
                 }
             }
         });
