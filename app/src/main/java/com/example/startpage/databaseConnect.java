@@ -18,7 +18,7 @@ public class databaseConnect extends SQLiteOpenHelper{
     private Context context;
     private static final String DATABASE_NAME = "fitness3.db";
     private static final int DATABASE_VERSION = 1;
-    private static final String TABLE_NAME = "user_profile";
+    private static final String TABLE_NAME = "user_profile2";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "Name";
     private static final String COLUMN_WEIGHT = "Weight";
@@ -62,7 +62,7 @@ public class databaseConnect extends SQLiteOpenHelper{
             cv.put(COLUMN_GENDER, gender);
 
 
-            Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM user_profile", null);
+            Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM user_profile2", null);
             cursor.moveToFirst();
             int count = cursor.getInt(0);
             cursor.close();
@@ -74,6 +74,7 @@ public class databaseConnect extends SQLiteOpenHelper{
 
             }else {
                 Toast.makeText(context, "Cannot make another profile", Toast.LENGTH_SHORT).show();
+
             }
         }
     }
@@ -83,10 +84,7 @@ public class databaseConnect extends SQLiteOpenHelper{
                 null, null, null, null, null, "1");
         if (cursor != null) {
             cursor.moveToFirst();
-
         }
-
         return cursor;
     }
-
 }

@@ -5,5 +5,7 @@
     <string name="drawer_layout_description">Navigation drawer</string>
     <string name="play_button_description">Play video</string>
     <string name="play_button2"></string>
+    <string name="bmi">BMI</string>
+    <string name="_18"><![CDATA[< 18]]></string>
 
 </resources>

@@ -28,7 +28,7 @@
                 android:background="#ffffff">
                 <Button
                     android:id="@+id/btnFullBody"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/fullbody_3"
@@ -43,7 +43,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
                 <Button
                     android:id="@+id/btnArms"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/arms"
@@ -58,7 +58,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/btnFullBody"/>
                 <Button
                     android:id="@+id/btnAbs"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/abs_1"
@@ -73,7 +73,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/btnArms"/>
                 <Button
                     android:id="@+id/btnBacks"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/back_1"
@@ -87,7 +87,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/btnAbs"/>
                 <Button
                     android:id="@+id/btnLegs"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:background="@drawable/legs_1"

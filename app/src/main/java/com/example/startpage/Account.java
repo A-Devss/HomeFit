@@ -27,17 +27,11 @@ public class Account extends AppCompatActivity {
         name_view = findViewById(R.id.textView3);
         gender_view = findViewById(R.id.textView14);
 
-        databaseConnect dbCon = new databaseConnect(this);
-        Cursor cursor = dbCon.getFirstRowData();
+    }
 
-        String name = cursor.getString(0);
-        String weight = cursor.getString(1);
-        String height = cursor.getString(2);
-        String gender = cursor.getString(3);
-        weight_view.setText(weight);
-        height_view.setText(height);
-        name_view.setText(name);
-        gender_view.setText(gender);
+    @Override
+    protected void onStart() {
+        super.onStart();
 
 
     }

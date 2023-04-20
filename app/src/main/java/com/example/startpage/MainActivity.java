@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         prog();
 
-
-
     }
     @Override
     protected void onStart() {
@@ -51,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
                }
             }
         };
-        timer.schedule(tt, 0, 100);
+        timer.schedule(tt, 0, 40);
     }
 }

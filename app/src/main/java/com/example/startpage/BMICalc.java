@@ -3,6 +3,7 @@ package com.example.startpage;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 public class BMICalc extends AppCompatActivity {
 
     EditText weight, height;
-    TextView result;
+    TextView result, bmiclass;
     Button btn_calc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class BMICalc extends AppCompatActivity {
         height = findViewById(R.id.heightcalc);
         result = findViewById(R.id.result_bmi);
         btn_calc = findViewById(R.id.btn_calc);
-
+        bmiclass = findViewById(R.id.textView16);
     }
     @Override
     protected void onStart() {
@@ -44,6 +45,12 @@ public class BMICalc extends AppCompatActivity {
                     String rs = String.format("%.2f",bmi);
                     result.setText(rs);//sample
                 }
+            }
+        });
+        bmiclass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BMICalc.this, bmi_classification.class));
             }
         });
     }

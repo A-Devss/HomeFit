@@ -10,7 +10,7 @@ public class report_menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_menu);
-        getSupportActionBar().setTitle("Account");
+        getSupportActionBar().setTitle("Reports");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
