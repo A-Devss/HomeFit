@@ -49,6 +49,7 @@
         <activity
             android:name=".bmi_classification"
             android:exported="false"
+            android:parentActivityName=".BMICalc"
             android:screenOrientation="portrait" />
         <activity
             android:name=".report_menu"

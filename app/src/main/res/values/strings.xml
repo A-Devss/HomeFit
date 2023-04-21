@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Workouts</string>
+    <string name="app_name">HomeFit 30days Fitness Challenge</string>
     <string name="open">Open Navigation Drawer</string>
     <string name="close">Close Navigation Drawer</string>
     <string name="drawer_layout_description">Navigation drawer</string>
