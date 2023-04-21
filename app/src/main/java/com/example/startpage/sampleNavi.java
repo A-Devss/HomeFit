@@ -44,6 +44,7 @@ public class sampleNavi extends AppCompatActivity {
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout, R.string.open, R.string.close);
         drawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Workouts");
 
     }
     @Override
