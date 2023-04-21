@@ -12,23 +12,40 @@
         android:theme="@style/Theme.StartPage"
         tools:targetApi="31">
         <activity
+            android:name=".day_1_exer2"
+            android:exported="false"
+            android:parentActivityName=".day_1"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".day_1"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".fullbody_page"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".legs_page"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".sampleNavi"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".back_page"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".sampleNavi"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abs_page"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".sampleNavi"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".arms_page"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".sampleNavi"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".fullbody_page"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".sampleNavi"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".bmi_classification"
             android:exported="false"

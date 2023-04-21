@@ -31,4 +31,9 @@ public class fullbody_page extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(fullbody_page.this, sampleNavi.class));
+    }
 }
