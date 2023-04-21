@@ -11,7 +11,9 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -22,6 +24,7 @@ public class sampleNavi extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+    Button btnFullbody, btnArm, btnAbs, btnBack, btnLegs;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -41,10 +44,8 @@ public class sampleNavi extends AppCompatActivity {
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout, R.string.open, R.string.close);
         drawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorBlack)));
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -73,6 +74,43 @@ public class sampleNavi extends AppCompatActivity {
                     }
                 }
                 return false;
+            }
+        });
+        btnFullbody = findViewById(R.id.btnFullBody);
+        btnFullbody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(sampleNavi.this, fullbody_page.class);
+                startActivity(intent);
+            }
+        });
+        btnArm = findViewById(R.id.btnArms);
+        btnArm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(sampleNavi.this, arms_page.class);
+                startActivity(intent);
+            }
+        });
+        btnAbs = findViewById(R.id.btnAbs);
+        btnAbs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(sampleNavi.this, abs_page.class));
+            }
+        });
+        btnBack = findViewById(R.id.btnBacks);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(sampleNavi.this, back_page.class));
+            }
+        });
+        btnLegs = findViewById(R.id.btnLegs);
+        btnLegs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(sampleNavi.this, legs_page.class));
             }
         });
     }

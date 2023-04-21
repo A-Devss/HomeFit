@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".report_menu"
-    android:background="@drawable/gradient">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:background="@drawable/calendary_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HISTORY"
-        android:textSize="24sp"
-        android:id="@+id/tvHistory"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textColor="#ffffff"/>
+        android:orientation="horizontal"
+        android:id="@+id/linear_history"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="HISTORY"
+            android:textColor="#ffffff"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
     <View
         android:id="@+id/view_space1"
         android:layout_width="match_parent"
@@ -24,7 +30,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="@color/colorGray"
-        android:layout_below="@+id/tvHistory"/>
+        android:layout_below="@+id/linear_history"/>
 
     <CalendarView
         android:id="@+id/calendar_view"

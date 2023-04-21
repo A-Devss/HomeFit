@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/create_profile_bg"
     tools:context=".createProfileActivity"
     android:orientation="vertical"
     android:gravity="center">
@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Profile"
+        android:textStyle="bold"
         android:textColor="@color/colorWhite"
         android:textSize="48sp"/>
 

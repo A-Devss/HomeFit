@@ -14,7 +14,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/gradient">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,7 +31,6 @@
                     android:id="@+id/btnFullBody"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:background="@drawable/fullbody_3"
                     android:gravity="bottom|left"
                     android:text="Full Body"
@@ -45,7 +45,6 @@
                     android:id="@+id/btnArms"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:background="@drawable/arms"
                     android:gravity="bottom|left"
                     android:text="Arms"
@@ -60,7 +59,6 @@
                     android:id="@+id/btnAbs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:background="@drawable/abs_1"
                     android:gravity="bottom|left"
                     android:text="Abs"
@@ -75,7 +73,6 @@
                     android:id="@+id/btnBacks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:background="@drawable/back_1"
                     android:gravity="bottom|left"
                     android:text="Back"
@@ -89,7 +86,6 @@
                     android:id="@+id/btnLegs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:background="@drawable/legs_1"
                     android:gravity="bottom|left"
                     android:text="Legs"
