@@ -18,6 +18,7 @@
             android:orientation="horizontal"
             android:gravity="center">
             <Button
+                android:id="@+id/back_d1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"

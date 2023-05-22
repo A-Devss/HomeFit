@@ -49,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
                }
             }
         };
-        timer.schedule(tt, 0, 40);
+        timer.schedule(tt, 0, 30);
     }
 }

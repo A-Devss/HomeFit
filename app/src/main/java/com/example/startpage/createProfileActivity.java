@@ -3,7 +3,9 @@ package com.example.startpage;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,6 +24,7 @@ public class createProfileActivity extends AppCompatActivity {
     private AutoCompleteTextView gender_input;
     private ImageView imDropDown;
     Button btnProceed, btnCreate;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,8 @@ public class createProfileActivity extends AppCompatActivity {
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, gender);
         gender_input.setAdapter(adapter);
 
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+
     }
     private static final String[] gender = new String[]{"Male", "Female"};
     @Override
@@ -47,7 +52,24 @@ public class createProfileActivity extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent();
+                String name = name_input.getText().toString();
+                String weight = weight_input.getText().toString();
+                String height = height_input.getText().toString();
+                String gender = gender_input.getText().toString();
 
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("_name", name);
+                editor.putString("_weight", weight);
+                editor.putString("_height", height);
+                editor.putString("_gender", gender);
+                editor.apply();
+
+                height_input.setText("");
+                weight_input.setText("");
+                name_input.setText("");
+                gender_input.setText("");
+                startActivity(new Intent(createProfileActivity.this, sampleNavi.class));
             }
         });
         btnProceed.setOnClickListener(new View.OnClickListener() {

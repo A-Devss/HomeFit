@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="jumping_jack">
+        Start with your feet together and your arms
+        by your sides,then jump up with your feet apart and
+        your hands overhead.
+
+        Return to the starting position then do the next
+        rep.This exercise provides a full-body workout and
+        works all your large muscle
+    </string>
+    <string name="abdominal">
+        Lie on your back with your knees bent and your arms
+        stretched forward. Then lift your upper body off the floor.
+
+        Hold for a few seconds and slowly return
+        It primarily works the rectus abdominus muscle and
+        the obliques
+    </string>
+    <string name="plank">
+        Lie on the floor with your toes and forearms on the ground.
+
+        Keep your body straight and hold this position as long as you can.
+    </string>
+    <string name="push_up">
+        Lay prone on the ground with arms supporting your body.
+        Keep your body straight while raising and lowering your
+        body with your arms.
+
+        This exercise works the chest, shoulders, triceps, back and legs.
+    </string>
+    <string name="step_up">
+        Stand in front of a chair. Then step up on the chair
+        and step back down.
+
+        The exercise works to strengthen the legs and buttocks
+    </string>
+   <!--arms-->
+    <string name="arms_circle">
+        Stand on the floor with your arms extended straight out
+        to the sides at shoulder height.
+
+        Move your arms forward in circles, and then move backwards.
+    </string>
+    <string name="triceps_dips">For the start position, sit on the chair. Then move your hip off
+        the chair with your hands holding the edge of the chair.
+
+        Slowly bend and stretch your arms to make your body go up and down.
+        This is a great exercise for the triceps
+    </string>
+    <string name="mountain_climber">
+        Start in the push-up position. Bend your right knee
+        towards your chest and keep your left leg straight,
+        then quickly switch from one leg to other.
+
+        This exercise strengthens multiple muscle groups
+    </string>
+    <!--abs-->
+    <string name="sit_ups">
+        Lie on your back with your hands behind your ears. Then lift your
+        upper body off the floor and slowly up to the sitting position.
+        Don’t tug your neck when you get up.
+
+        If your spine hurts, please change to another workout.
+    </string>
+    <string name="leg_raises">
+        Lie down on your back and put your hands beneath your hips for support.
+        Then lift your legs up until they form a right angle with the floor.
+
+        Slowly bring your legs back down and repeat the exercise.
+    </string>
+    <string name="russian_twist">
+        Sit on the floor with your knees bent, feet lifted a little bit
+        and back tilted backwards.
+
+        Then hold your hands together and twist from side to side.
+    </string>
+    <!--back-->
+    <string name="reverse_snow_angels">
+        Lie face down, extend arms straight overhead, lift arms and legs off the ground,
+        externally rotate arms in a sweeping motion, engage core muscles, maintain
+        control, and repeat for desired repetitions.
+
+        Reverse snow angels target the back and core muscles, promoting improved posture
+        and spinal alignment while strengthening the abdominal and lower back muscles.
+    </string>
+    <string name="superman">
+        Lie face down on the floor, extend your arms forward, simultaneously lift
+        your arms and legs off the ground, hold for a few seconds.
+
+        while squeezing your glutes and engaging your back muscles, then lower back
+        down and repeat for desired repetitions to strengthen your posterior
+        chain and improve core stability.
+    </string>
+    <string name="hip_hinge">Lie face down on the floor, extend your arms forward, simultaneously
+        lift your arms and legs off the ground, hold for a few seconds while squeezing
+        your glutes and engaging your back muscles, then lower back down and repeat
+        for desired repetitions to strengthen your posterior chain and
+        improve core stability.
+    </string>
+    <string name="aqua_man">First lift your right arm and the left leg as much as you can.
+        And when you bring the two down, lift your left arm and your
+        right leg. Do both these movements as fast as possible.
+    </string>
+<!--leg-->
+    <string name="cursty_lunges">
+        Stand straight up. Then step back with your left leg to the right
+        and bend your knees at the same time.
+
+        Go back to the start position and switch to the other side.
+    </string>
+   <!-- <string name="squats">
+        Stand with your hands on your hips and feet a little wider than shoulder width apart.
+
+        Then lower your body until your thighs are parallel to the floor.
+
+        Your knees should be extended in the same direction as your tiptoes
+    </string>-->
+   <!-- <string name="side_lying">
+        Lie down on your side with your head rested on your right arm.
+        Lift your upper leg up and return to the start position.
+
+        Make sure your left leg goes straight and down during the exercise
+        It's a great exercise for the gluteus
+    </string>-->
+   <string name="bottom_leg">
+       Lie on your left side with your head resting on your left hand.
+
+       Then put your right foot forward on the floor. Lift your left leg up and down.
+   </string>
+    <string name="wall_sit">Start with your back against the wall, then slide
+        down until your knees are at a 90-degree angle.
+
+        Keep your back against the wall with your hands and arms away
+        from your legs. Hold the position.
+        The exercise is to strengthen the quadriceps muscles.
+   </string>
+</resources>

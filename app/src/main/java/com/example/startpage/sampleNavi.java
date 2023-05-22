@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.NavigableMap;
 
-public class sampleNavi extends AppCompatActivity {
+public class sampleNavi extends AppCompatActivity implements View.OnClickListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
@@ -46,10 +46,17 @@ public class sampleNavi extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Workouts");
 
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
+        btnFullbody = findViewById(R.id.btnFullBody);
+        btnArm = findViewById(R.id.btnArms);
+        btnBack = findViewById(R.id.btnBacks);
+        btnLegs = findViewById(R.id.btnLegs);
+        btnAbs = findViewById(R.id.btnAbs);
+        btnLegs.setOnClickListener(this);
+        btnBack.setOnClickListener(this);
+        btnFullbody.setOnClickListener(this);
+        btnAbs.setOnClickListener(this);
+        btnArm.setOnClickListener(this);
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -69,7 +76,6 @@ public class sampleNavi extends AppCompatActivity {
                     }
                     case R.id.reports:
                     {
-                        Toast.makeText(sampleNavi.this, "Reports Selected", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(sampleNavi.this, report_menu.class));
                         break;
                     }
@@ -77,44 +83,8 @@ public class sampleNavi extends AppCompatActivity {
                 return false;
             }
         });
-        btnFullbody = findViewById(R.id.btnFullBody);
-        btnFullbody.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(sampleNavi.this, fullbody_page.class);
-                startActivity(intent);
-            }
-        });
-        btnArm = findViewById(R.id.btnArms);
-        btnArm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(sampleNavi.this, arms_page.class);
-                startActivity(intent);
-            }
-        });
-        btnAbs = findViewById(R.id.btnAbs);
-        btnAbs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(sampleNavi.this, abs_page.class));
-            }
-        });
-        btnBack = findViewById(R.id.btnBacks);
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(sampleNavi.this, back_page.class));
-            }
-        });
-        btnLegs = findViewById(R.id.btnLegs);
-        btnLegs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(sampleNavi.this, legs_page.class));
-            }
-        });
     }
+
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START))
@@ -125,4 +95,39 @@ public class sampleNavi extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    @Override
+    public void onClick(View v) {
+        int itemId = v.getId();
+        switch (itemId) {
+            case R.id.btnFullBody: {
+
+                startActivity(new Intent(sampleNavi.this, fullbody_page.class));
+                break;
+            }
+            case R.id.btnArms: {
+
+                startActivity(new Intent(sampleNavi.this, arms_page.class));
+                break;
+            }
+            case R.id.btnBacks: {
+                startActivity(new Intent(sampleNavi.this, back_page.class));
+                break;
+            }
+            case R.id.btnAbs:{
+                startActivity(new Intent(sampleNavi.this, abs_page.class));
+                break;
+            }
+            case R.id.btnLegs:{
+                startActivity(new Intent(sampleNavi.this, legs_page.class));
+                break;
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
 }
