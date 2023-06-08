@@ -14,6 +14,381 @@
         android:theme="@style/Theme.StartPage"
         tools:targetApi="31">
         <activity
+            android:name=".abs_day_30_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_30_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_30_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_30_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_30_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_29_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_29_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_29_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_29_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_29_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_28_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_28_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_28_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_28_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_28_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_27_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_27_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_27_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_27_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_27_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_26_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_26_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_26_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_26_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_26_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_25_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_25_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_25_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_25_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_25_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_24_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_24_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_24_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_24_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_23_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_23_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_23_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_23_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_23_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_22_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_22_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_22_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_22_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_22_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_21_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_21_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_21_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_21_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_21_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_20_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_20_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_20_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_20_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_20_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_19_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_19_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_19_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_19_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_19_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_18_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_18_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_18_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_18_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_18_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_17_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_17_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_17_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_17_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_17_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_16_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_16_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_16_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_16_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_16_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_15_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_15_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_15_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_15_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_15_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_14_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_14_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_14_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_14_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_14_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_13_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_13_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_13_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_13_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_13_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_12_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_12_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_12_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_12_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_12_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_11_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_11_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_11_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_11_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_11_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_10_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_10_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_10_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_10_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_10_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_9_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_9_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_9_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_9_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_9_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_8_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_8_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_8_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_8_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_8_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_7_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_7_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_7_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_7_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_7_exer1"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_6_exer5"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_6_exer4"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_6_exer3"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_6_exer2"
+            android:exported="false" />
+        <activity
+            android:name=".abs_day_6_exer1"
+            android:exported="false" />
+        <activity
             android:name=".arms_day_30_exer5"
             android:exported="false" />
         <activity
