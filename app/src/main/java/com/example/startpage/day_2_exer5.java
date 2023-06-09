@@ -42,10 +42,10 @@ public class day_2_exer5 extends AppCompatActivity implements View.OnClickListen
         else if(btn_id == R.id.d2_btn_finish1){
             Intent intent = new Intent(day_2_exer5.this, fullbody_page.class);
 
-            sharedPreferences = getSharedPreferences("MyPrefs_d2", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putInt("key_d2", R.drawable.bg_rounded_rectangle);
-            editor.apply();
+//            sharedPreferences = getSharedPreferences("MyPrefs_d2", Context.MODE_PRIVATE);
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.putInt("key_d2", R.drawable.bg_rounded_rectangle);
+//            editor.apply();
 
             startActivity(intent);
             overridePendingTransition(0, 0);
