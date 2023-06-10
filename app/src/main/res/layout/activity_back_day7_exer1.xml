@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".back_day_7_exer1">
+    tools:context=".back_day_7_exer1"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_exercise"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/reverse_snow_angels"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reverse Snow Angels"
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="(5 reps)"
+            android:textColor="@color/red"
+            android:textSize="22sp"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reverse_snow_angels"
+                android:scrollbars="vertical"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"/>
+        </ScrollView>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/back_d7_btn_next1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ripple_effect_buton"
+        android:layout_marginBottom="50dp"
+        />
+    <TextView
+        android:id="@+id/back_d7_btn_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+</RelativeLayout>

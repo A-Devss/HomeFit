@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".day_1_exer2"
+    tools:context=".back_day_1_exer2"
     android:background="@drawable/gradient">
 
     <LinearLayout
