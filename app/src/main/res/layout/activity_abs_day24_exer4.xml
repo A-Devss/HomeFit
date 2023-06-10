@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".abs_day_27_exer4"
+    tools:context=".abs_day_24_exer4"
     android:background="@drawable/gradient">
 
     <LinearLayout
@@ -46,7 +46,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/abs_d27_btn_next4"
+        android:id="@+id/abs_d24_btn_next4"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -60,7 +60,7 @@
         android:layout_marginBottom="50dp"
         />
     <TextView
-        android:id="@+id/abs_d27_btn_back4"
+        android:id="@+id/abs_d24_btn_back4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"

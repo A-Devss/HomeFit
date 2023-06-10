@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".day_1"
+    tools:context=".abs_day_1_exer1"
     android:background="@drawable/gradient"
     android:orientation="vertical">
 
