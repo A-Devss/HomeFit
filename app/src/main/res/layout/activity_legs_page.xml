@@ -18,6 +18,7 @@
             android:orientation="horizontal"
             android:gravity="center">
             <Button
+                android:id="@+id/btn_d1_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -27,6 +28,7 @@
                 android:textColor="@color/white"
                 style="?android:attr/buttonBarButtonStyle"/>
             <Button
+                android:id="@+id/btn_d2_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -36,6 +38,7 @@
                 android:textColor="@color/white"
                 style="?android:attr/buttonBarButtonStyle"/>
             <Button
+                android:id="@+id/btn_d3_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -45,6 +48,7 @@
                 android:textColor="@color/white"
                 style="?android:attr/buttonBarButtonStyle"/>
             <Button
+                android:id="@+id/btn_d4_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -54,6 +58,7 @@
                 android:textColor="@color/white"
                 style="?android:attr/buttonBarButtonStyle"/>
             <Button
+                android:id="@+id/btn_d5_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -117,6 +122,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_d6_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -127,6 +133,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d7_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -137,6 +144,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d8_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -147,6 +155,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d9_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -157,6 +166,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d10_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -225,6 +235,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_d11_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -235,6 +246,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d12_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -245,6 +257,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d13_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -255,6 +268,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d14_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -265,6 +279,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d15_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -333,6 +348,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_d16_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -343,6 +359,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d17_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -353,6 +370,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d18_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -363,6 +381,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d19_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -373,6 +392,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d20_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -441,6 +461,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_d21_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -451,6 +472,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d22_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -461,6 +483,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d23_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -471,6 +494,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d24_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -481,6 +505,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d25_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"
@@ -549,6 +574,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_d26_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -559,6 +585,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d27_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -569,6 +596,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d28_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -579,6 +607,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d29_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="25dp"
@@ -589,6 +618,7 @@
                 style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
+                android:id="@+id/btn_d30_legs"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/circle_bg1"

@@ -437,9 +437,6 @@
             android:name=".leg_day_3_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_30_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_30_exer4"
             android:exported="false" />
         <activity
@@ -450,9 +447,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_30_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_29_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_29_exer4"
@@ -467,9 +461,6 @@
             android:name=".back_day_29_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_28_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_28_exer4"
             android:exported="false" />
         <activity
@@ -480,9 +471,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_28_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_27_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_27_exer4"
@@ -497,9 +485,6 @@
             android:name=".back_day_27_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_26_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_26_exer4"
             android:exported="false" />
         <activity
@@ -510,9 +495,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_26_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_25_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_25_exer4"
@@ -527,9 +509,6 @@
             android:name=".back_day_25_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_24_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_24_exer4"
             android:exported="false" />
         <activity
@@ -540,9 +519,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_24_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_23_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_23_exer4"
@@ -557,9 +533,6 @@
             android:name=".back_day_23_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_22_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_22_exer4"
             android:exported="false" />
         <activity
@@ -570,9 +543,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_22_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_21_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_21_exer4"
@@ -587,9 +557,6 @@
             android:name=".back_day_21_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_20_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_20_exer4"
             android:exported="false" />
         <activity
@@ -600,9 +567,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_20_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_19_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_19_exer4"
@@ -617,9 +581,6 @@
             android:name=".back_day_19_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_18_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_18_exer4"
             android:exported="false" />
         <activity
@@ -630,9 +591,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_18_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_17_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_17_exer4"
@@ -647,9 +605,6 @@
             android:name=".back_day_17_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_16_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_16_exer4"
             android:exported="false" />
         <activity
@@ -660,9 +615,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_16_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_15_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_15_exer4"
@@ -677,9 +629,6 @@
             android:name=".back_day_15_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_14_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_14_exer4"
             android:exported="false" />
         <activity
@@ -690,9 +639,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_14_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_13_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_13_exer4"
@@ -707,9 +653,6 @@
             android:name=".back_day_13_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_12_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_12_exer4"
             android:exported="false" />
         <activity
@@ -720,9 +663,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_12_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_11_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_11_exer4"
@@ -737,9 +677,6 @@
             android:name=".back_day_11_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_10_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_10_exer4"
             android:exported="false" />
         <activity
@@ -750,9 +687,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_10_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_9_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_9_exer4"
@@ -767,9 +701,6 @@
             android:name=".back_day_9_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_8_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_8_exer4"
             android:exported="false" />
         <activity
@@ -780,9 +711,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_8_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_7_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_7_exer4"
@@ -797,9 +725,6 @@
             android:name=".back_day_7_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_6_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_6_exer4"
             android:exported="false" />
         <activity
@@ -812,9 +737,6 @@
             android:name=".back_day_6_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_5_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_5_exer4"
             android:exported="false" />
         <activity
@@ -825,9 +747,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_5_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_4_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_4_exer4"
@@ -1997,9 +1916,6 @@
             android:name=".leg_day_1_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_3_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_3_exer4"
             android:exported="false" />
         <activity
@@ -2012,9 +1928,6 @@
             android:name=".back_day_3_exer1"
             android:exported="false" />
         <activity
-            android:name=".back_day_2_exer5"
-            android:exported="false" />
-        <activity
             android:name=".back_day_2_exer4"
             android:exported="false" />
         <activity
@@ -2025,9 +1938,6 @@
             android:exported="false" />
         <activity
             android:name=".back_day_2_exer1"
-            android:exported="false" />
-        <activity
-            android:name=".back_day_1_exer5"
             android:exported="false" />
         <activity
             android:name=".back_day_1_exer4"

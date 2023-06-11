@@ -19,10 +19,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class fullbody_page extends AppCompatActivity implements View.OnClickListener {
-    private Button btnClear,btn1, btn2, btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,btn25,btn26,btn27,btn28,btn29,btn30;
+public class fullbody_page extends AppCompatActivity  implements View.OnClickListener {
+    private Button btnClear,btn1, btn2, btn3,btn4,btn5,btn6,btn7,
+            btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,
+            btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,btn25,btn26,btn27,btn28,btn29,btn30;
     private SharedPreferences sharedPreferences;
-    public static final int REQUEST_CODE = 101;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,20 +32,18 @@ public class fullbody_page extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().setTitle("Full Body");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-
         btnClear = findViewById(R.id.fbody_clear);
         btnClear.setOnClickListener(this);
 
         findViewIDbutton();
-
+        setButtonBackground();
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        setButtonBackground();
+
 
     }
     private void findViewIDbutton(){
@@ -111,10 +110,10 @@ public class fullbody_page extends AppCompatActivity implements View.OnClickList
 
     }
     private void setButtonBackground() {
-        sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
+       /* sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
         int getDrawable = sharedPreferences.getInt("key_d1", R.drawable.circle_bg1);
 
-           btn1.setBackgroundResource(getDrawable);
+           btn1.setBackgroundResource(getDrawable);*/
 //        sharedPreferences = getSharedPreferences("MyPrefs_d2", Context.MODE_PRIVATE);
 //        int getBackground_2 = sharedPreferences.getInt("key_d2", R.drawable.circle_bg1);
 //        btn2.setBackgroundResource(getBackground_2);
@@ -266,7 +265,7 @@ public class fullbody_page extends AppCompatActivity implements View.OnClickList
             overridePendingTransition(0, 0);
         }
 
-        /*clear button*/
+       /* clear button;*/
         if(v == btnClear){
             sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();

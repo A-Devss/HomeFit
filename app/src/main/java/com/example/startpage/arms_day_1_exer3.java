@@ -28,7 +28,7 @@ public class arms_day_1_exer3 extends AppCompatActivity  implements View.OnClick
     @Override
     public void onClick(View v) {
         if(v == btn_back3){
-            startActivity(new Intent(arms_day_1_exer3.this, arms_page.class));
+            startActivity(new Intent(arms_day_1_exer3.this, arms_day_1_exer2.class));
             overridePendingTransition(0, 0);
         }
         else if(v == btn_next3){

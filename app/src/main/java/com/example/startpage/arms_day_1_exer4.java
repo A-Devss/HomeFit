@@ -17,7 +17,7 @@ public class arms_day_1_exer4 extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arms_day1_exer4);
-        getSupportActionBar().setTitle("Day 4");
+        getSupportActionBar().setTitle("Day 1");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btn_next4 = findViewById(R.id.arms_d1_btn_next4);
@@ -28,7 +28,7 @@ public class arms_day_1_exer4 extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if(v == btn_back4){
-            startActivity(new Intent(arms_day_1_exer4.this, arms_page.class));
+            startActivity(new Intent(arms_day_1_exer4.this, arms_day_1_exer3.class));
             overridePendingTransition(0, 0);
         }
         else if(v == btn_next4){
