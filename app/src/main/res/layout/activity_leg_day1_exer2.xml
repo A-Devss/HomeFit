@@ -61,7 +61,6 @@
             android:textSize="20sp"
             android:background="@drawable/ripple_effect_buton"
             android:layout_gravity="center_horizontal"
-
             />
         <TextView
             android:id="@+id/leg_d1_btn_back2"
