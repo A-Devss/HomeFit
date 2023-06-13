@@ -25,6 +25,7 @@ public class abs_day_8_exer5 extends AppCompatActivity implements View.OnClickLi
         btn_next.setOnClickListener(this);
         btnBack = findViewById(R.id.abs_d8_btn_back5);
         btnBack.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     public void onClick(View v) {
@@ -33,6 +34,7 @@ public class abs_day_8_exer5 extends AppCompatActivity implements View.OnClickLi
             overridePendingTransition(0, 0);
         }
         else if(v == btn_next){
+            SharedPreferencesHelper.setValue("Key_d8_abs", R.drawable.bg_rounded_rectangle);
             startActivity(new Intent(abs_day_8_exer5.this, abs_page.class));
             overridePendingTransition(0, 0);
         }

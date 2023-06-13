@@ -1,19 +1,8 @@
 package com.example.startpage;
-
-import static com.example.startpage.day_1.REQUEST_CODE_ACTIVITY_C;
-
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,7 +12,6 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
     private Button btnClear,btn1, btn2, btn3,btn4,btn5,btn6,btn7,
             btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,
             btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,btn25,btn26,btn27,btn28,btn29,btn30;
-    private SharedPreferences sharedPreferences;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +22,13 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btnClear = findViewById(R.id.fbody_clear);
         btnClear.setOnClickListener(this);
-
+        SharedPreferencesHelper.initialize(this);
         findViewIDbutton();
         setButtonBackground();
-
     }
-
     @Override
     protected void onResume() {
         super.onResume();
-
-
     }
     private void findViewIDbutton(){
         btn1 = findViewById(R.id.btn_d1_fullbody);
@@ -110,45 +94,37 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
 
     }
     private void setButtonBackground() {
-       /* sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
-        int getDrawable = sharedPreferences.getInt("key_d1", R.drawable.circle_bg1);
+        btn1.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d1_fbody", R.drawable.circle_bg1));
+        btn2.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d2_fbody", R.drawable.circle_bg1));
+        btn3.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d3_fbody", R.drawable.circle_bg1));
+        btn4.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d4_fbody", R.drawable.circle_bg1));
+        btn5.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d5_fbody", R.drawable.circle_bg1));
+        btn6.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d6_fbody", R.drawable.circle_bg1));
+        btn7.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d7_fbody", R.drawable.circle_bg1));
+        btn8.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d8_fbody", R.drawable.circle_bg1));
+        btn9.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d9_fbody", R.drawable.circle_bg1));
+        btn10.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d10_fbody", R.drawable.circle_bg1));
+        btn11.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d11_fbody", R.drawable.circle_bg1));
+        btn12.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d12_fbody", R.drawable.circle_bg1));
+        btn13.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d13_fbody", R.drawable.circle_bg1));
+        btn14.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d14_fbody", R.drawable.circle_bg1));
+        btn15.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d15_fbody", R.drawable.circle_bg1));
+        btn16.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d16_fbody", R.drawable.circle_bg1));
+        btn17.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d17_fbody", R.drawable.circle_bg1));
+        btn18.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d18_fbody", R.drawable.circle_bg1));
+        btn19.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d19_fbody", R.drawable.circle_bg1));
+        btn20.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d20_fbody", R.drawable.circle_bg1));
+        btn21.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d21_fbody", R.drawable.circle_bg1));
+        btn22.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d22_fbody", R.drawable.circle_bg1));
+        btn23.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d23_fbody", R.drawable.circle_bg1));
+        btn24.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d24_fbody", R.drawable.circle_bg1));
+        btn25.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d25_fbody", R.drawable.circle_bg1));
+        btn26.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d26_fbody", R.drawable.circle_bg1));
+        btn27.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d27_fbody", R.drawable.circle_bg1));
+        btn28.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d28_fbody", R.drawable.circle_bg1));
+        btn29.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d29_fbody", R.drawable.circle_bg1));
+        btn30.setBackgroundResource(SharedPreferencesHelper.getValue("Key_d30_fbody", R.drawable.circle_bg1));
 
-           btn1.setBackgroundResource(getDrawable);*/
-//        sharedPreferences = getSharedPreferences("MyPrefs_d2", Context.MODE_PRIVATE);
-//        int getBackground_2 = sharedPreferences.getInt("key_d2", R.drawable.circle_bg1);
-//        btn2.setBackgroundResource(getBackground_2);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d3", Context.MODE_PRIVATE);
-//        int getBackground_3 = sharedPreferences.getInt("key_d3", R.drawable.circle_bg1);
-//        btn3.setBackgroundResource(getBackground_3);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d4", Context.MODE_PRIVATE);
-//        int getBackground_4 = sharedPreferences.getInt("key_d4", R.drawable.circle_bg1);
-//        btn4.setBackgroundResource(getBackground_4);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d5", Context.MODE_PRIVATE);
-//        int getBackground_5 = sharedPreferences.getInt("key_d5", R.drawable.circle_bg1);
-//        btn5.setBackgroundResource(getBackground_5);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d6", Context.MODE_PRIVATE);
-//        int getBackground_6 = sharedPreferences.getInt("key_d6", R.drawable.circle_bg1);
-//        btn6.setBackgroundResource(getBackground_6);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d7", Context.MODE_PRIVATE);
-//        int getBackground_7 = sharedPreferences.getInt("key_d7", R.drawable.circle_bg1);
-//        btn7.setBackgroundResource(getBackground_7);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d8", Context.MODE_PRIVATE);
-//        int getBackground_8 = sharedPreferences.getInt("key_d8", R.drawable.circle_bg1);
-//        btn8.setBackgroundResource(getBackground_8);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d9", Context.MODE_PRIVATE);
-//        int getBackground_9 = sharedPreferences.getInt("key_d9", R.drawable.circle_bg1);
-//        btn9.setBackgroundResource(getBackground_9);
-//
-//        sharedPreferences = getSharedPreferences("MyPrefs_d10", Context.MODE_PRIVATE);
-//        int getBackground_10 = sharedPreferences.getInt("key_d10", R.drawable.circle_bg1);
-//        btn10.setBackgroundResource(getBackground_10);
     }
     @Override
     public void onBackPressed() {
@@ -168,7 +144,6 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        //int btn_id = v.getId();
         if(v == btn1){
             startActivity(new Intent(fullbody_page.this, day_1.class));
             overridePendingTransition(0, 0);
@@ -267,14 +242,38 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
 
        /* clear button;*/
         if(v == btnClear){
-            sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putInt("key_d1",R.drawable.circle_bg1);
-            editor.apply();
+            SharedPreferencesHelper.updateValue("Key_d1_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d2_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d3_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d4_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d5_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d6_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d7_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d8_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d9_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d10_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d11_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d12_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d13_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d14_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d15_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d16_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d17_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d18_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d19_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d20_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d21_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d22_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d23_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d24_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d25_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d26_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d27_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d28_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d29_fbody", R.drawable.circle_bg1);
+            SharedPreferencesHelper.updateValue("Key_d30_fbody", R.drawable.circle_bg1);
 
-            sharedPreferences = getSharedPreferences("MyPrefs_d1", Context.MODE_PRIVATE);
-            int resetBG = sharedPreferences.getInt("key_d1", R.drawable.circle_bg1);
-            btn1.setBackgroundResource(resetBG);
+           setButtonBackground();
         }
     }
 

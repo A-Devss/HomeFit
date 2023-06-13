@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="(8 reps)"
+            android:text="(10 reps)"
             android:textColor="@color/red"
             android:textSize="22sp"
             />

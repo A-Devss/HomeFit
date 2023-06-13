@@ -15,7 +15,6 @@ import android.widget.TextView;
 public class day_11_exer5 extends AppCompatActivity implements View.OnClickListener{
     private Button btnFinish;
     private TextView btnBack;
-    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +26,7 @@ public class day_11_exer5 extends AppCompatActivity implements View.OnClickListe
         btnBack = findViewById(R.id.d11_btn_back5);
         btnFinish.setOnClickListener(this);
         btnBack.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     public void onClick(View v) {
@@ -37,12 +37,7 @@ public class day_11_exer5 extends AppCompatActivity implements View.OnClickListe
         }
         else if(btn_id == R.id.d11_btn_finish1){
             Intent intent = new Intent(day_11_exer5.this, fullbody_page.class);
-
-//            sharedPreferences = getSharedPreferences("MyPrefs_d10", Context.MODE_PRIVATE);
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
-//            editor.putInt("key_d10", R.drawable.bg_rounded_rectangle);
-//            editor.apply();
-
+            SharedPreferencesHelper.setValue("Key_d11_fbody", R.drawable.bg_rounded_rectangle);
             startActivity(intent);
             overridePendingTransition(0, 0);
         }

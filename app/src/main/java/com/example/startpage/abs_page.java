@@ -15,6 +15,7 @@ public class abs_page extends AppCompatActivity implements View.OnClickListener{
             R.id.abs_d15, R.id.abs_d16, R.id.abs_d17, R.id.abs_d18, R.id.abs_d19, R.id.abs_d20, R.id.abs_d21,
             R.id.abs_d22, R.id.abs_d23, R.id.abs_d24, R.id.abs_d25, R.id.abs_d26, R.id.abs_d27, R.id.abs_d28,
             R.id.abs_d29, R.id.abs_d30};
+    private Button btnClear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,12 @@ public class abs_page extends AppCompatActivity implements View.OnClickListener{
         getSupportActionBar().setTitle("Abs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        btnClear = findViewById(R.id.abs_clear);
+        btnClear.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
         findViewID();
+        setButtonBackground();
+
     }
     @Override
     public void onBackPressed() {
@@ -36,10 +42,35 @@ public class abs_page extends AppCompatActivity implements View.OnClickListener{
         }
 
     }
+    private void setButtonBackground(){
+        int defaultDrawableResource = R.drawable.circle_bg1;
+
+        for (int i = 0; i < buttonIds.length; i++) {
+            int buttonId = buttonIds[i];
+            Button button = findViewById(buttonId);
+            if (button != null) {
+                String key = "Key_d" + (i + 1) + "_abs";
+                int drawableResource = SharedPreferencesHelper.getValue(key, defaultDrawableResource);
+                button.setBackgroundResource(drawableResource);
+            }
+        }
+    }
 
 
     @Override
     public void onClick(View v) {
+        if (v == btnClear){
+            int numberOfItems = 30;
+            int defaultDrawableResource = R.drawable.circle_bg1;
+
+            for (int i = 1; i <= numberOfItems; i++) {
+                String key = "Key_d" + i + "_abs";
+                SharedPreferencesHelper.updateValue(key, defaultDrawableResource);
+            }
+
+            setButtonBackground();
+
+        }
         for (int i = 0; i < buttonIds.length; i++) {
             if (v.getId() == buttonIds[i]) {
                 // Handle the click event for the corresponding button
