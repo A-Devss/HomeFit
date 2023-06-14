@@ -2,6 +2,7 @@ package com.example.startpage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class abs_page extends AppCompatActivity implements View.OnClickListener{
             R.id.abs_d15, R.id.abs_d16, R.id.abs_d17, R.id.abs_d18, R.id.abs_d19, R.id.abs_d20, R.id.abs_d21,
             R.id.abs_d22, R.id.abs_d23, R.id.abs_d24, R.id.abs_d25, R.id.abs_d26, R.id.abs_d27, R.id.abs_d28,
             R.id.abs_d29, R.id.abs_d30};
+
     private Button btnClear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +31,14 @@ public class abs_page extends AppCompatActivity implements View.OnClickListener{
         findViewID();
         setButtonBackground();
 
+
     }
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(abs_page.this, sampleNavi.class));
         overridePendingTransition(0, 0);
     }
+
     private  void findViewID(){
         for (int i = 0; i < buttonIds.length; i++) {
             Button btn= findViewById(buttonIds[i]);

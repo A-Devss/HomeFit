@@ -40,6 +40,7 @@ public class day_7_exer5 extends AppCompatActivity implements View.OnClickListen
         else if(btn_id == R.id.d7_btn_finish1){
             Intent intent = new Intent(day_7_exer5.this, fullbody_page.class);
             SharedPreferencesHelper.setValue("Key_d7_fbody", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(intent);
             overridePendingTransition(0, 0);
         }

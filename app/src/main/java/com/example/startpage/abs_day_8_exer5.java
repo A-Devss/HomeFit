@@ -35,6 +35,7 @@ public class abs_day_8_exer5 extends AppCompatActivity implements View.OnClickLi
         }
         else if(v == btn_next){
             SharedPreferencesHelper.setValue("Key_d8_abs", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(new Intent(abs_day_8_exer5.this, abs_page.class));
             overridePendingTransition(0, 0);
         }

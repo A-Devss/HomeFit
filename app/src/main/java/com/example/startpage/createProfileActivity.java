@@ -38,11 +38,11 @@ public class createProfileActivity extends AppCompatActivity {
         imDropDown = findViewById(R.id.imDrop);
         btnProceed = findViewById(R.id.buttonProceed);
         btnCreate = findViewById(R.id.buttonCreate);
+        SharedPreferencesHelper.initialize(this);
 
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, gender);
         gender_input.setAdapter(adapter);
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
     }
     private static final String[] gender = new String[]{"Male", "Female"};
@@ -58,12 +58,11 @@ public class createProfileActivity extends AppCompatActivity {
                 String height = height_input.getText().toString();
                 String gender = gender_input.getText().toString();
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("_name", name);
-                editor.putString("_weight", weight);
-                editor.putString("_height", height);
-                editor.putString("_gender", gender);
-                editor.apply();
+
+                SharedPreferencesHelper.saveName("_name", name);
+                SharedPreferencesHelper.saveWeight("_weight", weight);
+                SharedPreferencesHelper.saveHeight("_height", height);
+                SharedPreferencesHelper.saveGender("_gender", gender);
 
                 height_input.setText("");
                 weight_input.setText("");
@@ -91,7 +90,6 @@ public class createProfileActivity extends AppCompatActivity {
         name_input.setText("");
         gender_input.setText("");
     }
-
     @Override
     public void onBackPressed() {
     }

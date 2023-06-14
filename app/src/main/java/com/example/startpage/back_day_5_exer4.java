@@ -25,6 +25,7 @@ public class back_day_5_exer4 extends AppCompatActivity implements View.OnClickL
         btnFinish.setOnClickListener(this);
         btnBack = findViewById(R.id.back_d5_btn_back4);
         btnBack.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     public void onClick(View v) {
@@ -33,6 +34,8 @@ public class back_day_5_exer4 extends AppCompatActivity implements View.OnClickL
             overridePendingTransition(0, 0);
         }
         else if(v == btnFinish){
+            SharedPreferencesHelper.setValue("Key_d5_back", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(new Intent(back_day_5_exer4.this, back_page.class));
             overridePendingTransition(0, 0);
         }

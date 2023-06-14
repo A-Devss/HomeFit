@@ -21,7 +21,7 @@ public class day1_exer4 extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day1_exer4);
-        getSupportActionBar().setTitle("Day 2");
+        getSupportActionBar().setTitle("Day 1");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btnNext = findViewById(R.id.btn_next4);

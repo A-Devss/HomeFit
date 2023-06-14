@@ -25,6 +25,8 @@ public class fullbody_page extends AppCompatActivity  implements View.OnClickLis
         SharedPreferencesHelper.initialize(this);
         findViewIDbutton();
         setButtonBackground();
+
+
     }
     @Override
     protected void onResume() {

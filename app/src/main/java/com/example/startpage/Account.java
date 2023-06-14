@@ -25,13 +25,13 @@ import com.github.dhaval2404.imagepicker.ImagePicker;
 import java.util.Objects;
 
 public class Account extends AppCompatActivity implements View.OnClickListener {
-
     private TextView weight_view, height_view, name_view, gender_view;
     private Button btn_edit, btn_save;
-    private SharedPreferences sharedPreferences;
     private ImageView image;
-    private static final int READ_EXTERNAL_STORAGE_PERMISSION_REQUEST = 1;
     private static final int PICK_IMAGE_REQUEST = 1;
+    private String sharedPrefFile;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,25 +60,45 @@ public class Account extends AppCompatActivity implements View.OnClickListener {
         weight_view.setBackgroundColor(Color.TRANSPARENT);
         height_view.setBackgroundColor(Color.TRANSPARENT);
         gender_view.setBackgroundColor(Color.TRANSPARENT);
-
         btn_save.setEnabled(false);
+        sharedPrefFile = "com.jtinosa.finals";
+        sharedPreferences = getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        String getName = sharedPreferences.getString("_name", "Your Name");
-        String getWeight = sharedPreferences.getString("_weight", "0");
-        String getHeight = sharedPreferences.getString("_height", "0");
-        String getGender = sharedPreferences.getString("_gender", "askdhaf");
+        SharedPreferencesHelper.initialize(this);
+
+        displayInfo();
+
+
+
+    }
+    private void displayInfo(){
+        String getName = SharedPreferencesHelper.displayName("_name", "Your Name");
+        String getWeight = SharedPreferencesHelper.displayWeight("_weight", "");
+        String getHeight = SharedPreferencesHelper.displayHeight("_height", "");
+        String getGender = SharedPreferencesHelper.displayGender("_gender", "");
         name_view.setText(getName);
         weight_view.setText(getWeight);
         height_view.setText(getHeight);
         gender_view.setText(getGender);
 
+
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
+    }
 
+    private void displayPhoto(){
+
+        String uriString = sharedPreferences.getString("profile", null);
+        if (uriString != null) {
+            // Parse the URI string back to Uri object
+            Uri imageUri = Uri.parse(uriString);
+            // Set the image as profile picture in an ImageView
+            image.setImageURI(imageUri);
+        }
     }
 
     @Override
@@ -92,59 +112,49 @@ public class Account extends AppCompatActivity implements View.OnClickListener {
             btn_edit.setEnabled(false);
             btn_save.setEnabled(true);
         } else if (btn_id == R.id.buttonSaveProfile) {
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("_weight", weight_view.getText().toString());
-            editor.putString("_height", height_view.getText().toString());
-            editor.putString("_gender", gender_view.getText().toString());
-            editor.apply();
 
-            sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-            String getWeight = sharedPreferences.getString("_weight", "s");
-            String getHeight = sharedPreferences.getString("_height", "s");
-            String getGender = sharedPreferences.getString("_gender", "s");
-            weight_view.setText(getWeight);
-            height_view.setText(getHeight);
-            gender_view.setText(getGender);
+            SharedPreferencesHelper.saveWeight("_weight", weight_view.getText().toString());
+            SharedPreferencesHelper.saveHeight("_height", height_view.getText().toString());
+            SharedPreferencesHelper.saveGender("_gender", gender_view.getText().toString());
+
+            displayInfo();
             weight_view.setEnabled(false);
             height_view.setEnabled(false);
             gender_view.setEnabled(false);
             btn_save.setEnabled(false);
             Toast.makeText(this, "saved successfully", Toast.LENGTH_SHORT).show();
         }else if (btn_id == R.id.imageView){
-           /* Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(intent, PICK_IMAGE_REQUEST);*/
-            ImagePicker.with(Account.this)
+            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(intent, PICK_IMAGE_REQUEST);
+            /*ImagePicker.with(Account.this)
                     .crop()
                     .compress(720)
                     .maxResultSize(720, 720)
-                    .start();
+                    .start();*/
+
         }
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK) {
             // Get the selected image URI
             Uri selectedImageUri = data.getData();
 
             // Set the image as profile picture
             image.setImageURI(selectedImageUri);
 
-            // Save the image URI for future use (optional)
+            // Save the image URI for future use
             saveProfileImageUri(selectedImageUri);
-
+        }
     }
     private void saveProfileImageUri(Uri imageUri) {
         // Store the image URI using SharedPreferences, a database, or any other suitable storage mechanism
         // You can save it as a string or any other appropriate data type
         String uriString = imageUri.toString();
-
         // Save the image URI to SharedPreferences
-        SharedPreferences preferences = getSharedPreferences("MyPrefs3", MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("profileImageUri", uriString);
+        editor.putString("profile", uriString);
         editor.apply();
     }
-
 }

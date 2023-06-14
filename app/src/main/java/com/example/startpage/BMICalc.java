@@ -1,8 +1,10 @@
 package com.example.startpage;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +31,7 @@ public class BMICalc extends AppCompatActivity {
         result = findViewById(R.id.result_bmi);
         btn_calc = findViewById(R.id.btn_calc);
         bmiclass = findViewById(R.id.textView16);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     protected void onStart() {
@@ -44,7 +47,25 @@ public class BMICalc extends AppCompatActivity {
                     double bmi = calculateBMI(w, h);
                     String rs = String.format("%.2f",bmi);
                     result.setText(rs);//sample
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(BMICalc.this);
+                    builder.setMessage("Do you want to display your BMI?");
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // User clicked "Yes", perform the action to display something in another class
+                            SharedPreferencesHelper.saveText("bmi", rs);
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // User clicked "No", do nothing
+                        }
+                    });
+                    builder.show();
                 }
+
             }
         });
         bmiclass.setOnClickListener(new View.OnClickListener() {

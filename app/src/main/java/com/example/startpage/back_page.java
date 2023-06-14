@@ -17,6 +17,7 @@ public class back_page extends AppCompatActivity implements View.OnClickListener
             R.id.back_d15, R.id.back_d16, R.id.back_d17, R.id.back_d18, R.id.back_d19, R.id.back_d20, R.id.back_d21,
             R.id.back_d22, R.id.back_d23, R.id.back_d24, R.id.back_d25, R.id.back_d26, R.id.back_d27, R.id.back_d28,
             R.id.back_d29, R.id.back_d30};
+    private Button btnClear;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,15 @@ public class back_page extends AppCompatActivity implements View.OnClickListener
         getSupportActionBar().setTitle("Back");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        btnClear = findViewById(R.id.back_clear);
+        btnClear.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
         findViewID();
+        setButtonBackground();
     }
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(back_page.this, sampleNavi.class));
         overridePendingTransition(0, 0);
     }
     private  void findViewID(){
@@ -39,10 +44,34 @@ public class back_page extends AppCompatActivity implements View.OnClickListener
         }
 
     }
+    private void setButtonBackground(){
+        int defaultDrawableResource = R.drawable.circle_bg1;
 
+        for (int i = 0; i < buttonIds.length; i++) {
+            int buttonId = buttonIds[i];
+            Button button = findViewById(buttonId);
+            if (button != null) {
+                String key = "Key_d" + (i + 1) + "_back";
+                int drawableResource = SharedPreferencesHelper.getValue(key, defaultDrawableResource);
+                button.setBackgroundResource(drawableResource);
+            }
+        }
+    }
 
     @Override
     public void onClick(View v) {
+        if (v == btnClear){
+            int numberOfItems = 30;
+            int defaultDrawableResource = R.drawable.circle_bg1;
+
+            for (int i = 1; i <= numberOfItems; i++) {
+                String key = "Key_d" + i + "_back";
+                SharedPreferencesHelper.updateValue(key, defaultDrawableResource);
+            }
+
+            setButtonBackground();
+
+        }
         for (int i = 0; i < buttonIds.length; i++) {
             if (v.getId() == buttonIds[i]) {
                 // Handle the click event for the corresponding button

@@ -38,6 +38,7 @@ public class day_11_exer5 extends AppCompatActivity implements View.OnClickListe
         else if(btn_id == R.id.d11_btn_finish1){
             Intent intent = new Intent(day_11_exer5.this, fullbody_page.class);
             SharedPreferencesHelper.setValue("Key_d11_fbody", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(intent);
             overridePendingTransition(0, 0);
         }

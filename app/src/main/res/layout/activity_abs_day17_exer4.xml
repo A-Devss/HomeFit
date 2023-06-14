@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="20 reps (Each side x10)"
+            android:text="24 reps (Each side x10)"
             android:textColor="@color/red"
             android:textSize="22sp"
             />

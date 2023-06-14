@@ -24,6 +24,7 @@ public class arms_day_22_exer5 extends AppCompatActivity implements View.OnClick
         btnFinish.setOnClickListener(this);
         btn_back2 = findViewById(R.id.arms_d22_btn_back5);
         btn_back2.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     public void onClick(View v) {
@@ -32,10 +33,8 @@ public class arms_day_22_exer5 extends AppCompatActivity implements View.OnClick
             overridePendingTransition(0, 0);
         }
         else if(v == btnFinish){
-            //sharedPreferences = getSharedPreferences("MyPrefs_d10", Context.MODE_PRIVATE);
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
-//            editor.putInt("key_d10", R.drawable.bg_rounded_rectangle);
-//            editor.apply();
+            SharedPreferencesHelper.setValue("Key_d22_arms", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(new Intent(arms_day_22_exer5.this, arms_page.class));
             overridePendingTransition(0, 0);
 

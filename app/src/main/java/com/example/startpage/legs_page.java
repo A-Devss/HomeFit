@@ -16,6 +16,7 @@ public class legs_page extends AppCompatActivity implements View.OnClickListener
             R.id.btn_d15_legs, R.id.btn_d16_legs, R.id.btn_d17_legs, R.id.btn_d18_legs, R.id.btn_d19_legs, R.id.btn_d20_legs, R.id.btn_d21_legs,
             R.id.btn_d22_legs, R.id.btn_d23_legs, R.id.btn_d24_legs, R.id.btn_d25_legs, R.id.btn_d26_legs, R.id.btn_d27_legs, R.id.btn_d28_legs,
             R.id.btn_d29_legs, R.id.btn_d30_legs};
+    private Button btnClear;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +24,16 @@ public class legs_page extends AppCompatActivity implements View.OnClickListener
         getSupportActionBar().setTitle("Legs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        btnClear = findViewById(R.id.legs_clear);
+        btnClear.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
         findViewID();
+        setButtonBackground();
 
     }
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(legs_page.this, sampleNavi.class));
         overridePendingTransition(0, 0);
     }
     private  void findViewID(){
@@ -38,8 +43,33 @@ public class legs_page extends AppCompatActivity implements View.OnClickListener
         }
 
     }
+    private void setButtonBackground(){
+        int defaultDrawableResource = R.drawable.circle_bg1;
+
+        for (int i = 0; i < buttonIds.length; i++) {
+            int buttonId = buttonIds[i];
+            Button button = findViewById(buttonId);
+            if (button != null) {
+                String key = "Key_d" + (i + 1) + "_legs";
+                int drawableResource = SharedPreferencesHelper.getValue(key, defaultDrawableResource);
+                button.setBackgroundResource(drawableResource);
+            }
+        }
+    }
     @Override
     public void onClick(View v) {
+        if (v == btnClear){
+            int numberOfItems = 30;
+            int defaultDrawableResource = R.drawable.circle_bg1;
+
+            for (int i = 1; i <= numberOfItems; i++) {
+                String key = "Key_d" + i + "_legs";
+                SharedPreferencesHelper.updateValue(key, defaultDrawableResource);
+            }
+
+            setButtonBackground();
+
+        }
         for (int i = 0; i < buttonIds.length; i++) {
             if (v.getId() == buttonIds[i]) {
                 // Handle the click event for the corresponding button

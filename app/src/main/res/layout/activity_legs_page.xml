@@ -680,7 +680,7 @@
         </LinearLayout>
     </LinearLayout>
     <Button
-        android:id="@+id/fbody_clear"
+        android:id="@+id/legs_clear"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="Reset"

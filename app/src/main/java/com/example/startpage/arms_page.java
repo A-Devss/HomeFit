@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class arms_page extends AppCompatActivity implements View.OnClickListener {
-    private Button btn;
+    private Button btn, btnClear;
     private int[] buttonIds = {
             R.id.btn_d1_arms, R.id.btn_d2_arms, R.id.btn_d3_arms, R.id.btn_d4_arms, R.id.btn_d5_arms, R.id.btn_d6_arms,
             R.id.btn_d7_arms, R.id.btn_d8_arms, R.id.btn_d9_arms, R.id.btn_d10_arms, R.id.btn_d11_arms, R.id.btn_d12_arms,
@@ -26,8 +26,11 @@ public class arms_page extends AppCompatActivity implements View.OnClickListener
         getSupportActionBar().setTitle("Arms");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        btnClear = findViewById(R.id.arms_clear);
+        btnClear.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
         findViewID();
+        setButtonBackground();
     }
     private  void findViewID(){
         for (int i = 0; i < buttonIds.length; i++) {
@@ -36,8 +39,31 @@ public class arms_page extends AppCompatActivity implements View.OnClickListener
         }
 
     }
+    private void setButtonBackground(){
+        int defaultDrawableResource = R.drawable.circle_bg1;
+
+        for (int i = 0; i < buttonIds.length; i++) {
+            int buttonId = buttonIds[i];
+            Button button = findViewById(buttonId);
+            if (button != null) {
+                String key = "Key_d" + (i + 1) + "_arms";
+                int drawableResource = SharedPreferencesHelper.getValue(key, defaultDrawableResource);
+                button.setBackgroundResource(drawableResource);
+            }
+        }
+    }
     @Override
     public void onClick(View v) {
+        if (v == btnClear){
+            int numberOfItems = 30;
+            int defaultDrawableResource = R.drawable.circle_bg1;
+
+            for (int i = 1; i <= numberOfItems; i++) {
+                String key = "Key_d" + i + "_arms";
+                SharedPreferencesHelper.updateValue(key, defaultDrawableResource);
+            }
+            setButtonBackground();
+        }
 
         for (int i = 0; i < buttonIds.length; i++) {
             if (v.getId() == buttonIds[i]) {
@@ -203,7 +229,7 @@ public class arms_page extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(arms_page.this, sampleNavi.class));
         overridePendingTransition(0, 0);
     }
 }

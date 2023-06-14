@@ -4,69 +4,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".day_1"
-    android:background="@drawable/gradient"
-    android:orientation="vertical">
-
-    <LinearLayout
+    android:background="@drawable/gradient">
+<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_exercise"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
-            <pl.droidsonroids.gif.GifImageView
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:fillViewport="true">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_exercise"
+    android:gravity="center">
+            <LinearLayout
+                android:id="@+id/linear_d1_exer1"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:src="@drawable/jumping_jack"/>
-            <TextView
-                android:layout_width="wrap_content"
+                android:layout_height="600dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:src="@drawable/jumping_jack"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumping Jack"
+                    android:layout_marginTop="20dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="(15 seconds)"
+                    android:textColor="@color/red"
+                    android:textSize="22sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jumping_jack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_next1"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="Jumping Jack"
+                android:text="Next"
+                android:textAllCaps="false"
                 android:layout_marginTop="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="(15 seconds)"
-                android:textColor="@color/red"
-                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ripple_effect_buton"
+                android:layout_below="@id/linear_d1_exer1"
                 />
             <TextView
+                android:id="@+id/btn_back1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/jumping_jack"
-                android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:textAlignment="center"
-                android:textColor="@color/white"/>
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_next1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:textAllCaps="false"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/ripple_effect_buton"
-        android:layout_marginBottom="50dp"
-        />
-    <TextView
-        android:id="@+id/btn_back1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:layout_marginBottom="10dp"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
+                android:text="Back"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/btn_next1"/>
 
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+</RelativeLayout>
+</ScrollView>
 </RelativeLayout>

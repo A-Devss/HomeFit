@@ -33,6 +33,8 @@ public void onClick(View v) {
         overridePendingTransition(0, 0);
         }
         else if(v == btnFinish){
+            SharedPreferencesHelper.setValue("Key_d28_back", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
         startActivity(new Intent(back_day_28_exer4.this, back_page.class));
         overridePendingTransition(0, 0);
         }

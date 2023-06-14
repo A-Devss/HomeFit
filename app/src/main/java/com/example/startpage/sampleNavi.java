@@ -92,7 +92,8 @@ public class sampleNavi extends AppCompatActivity implements View.OnClickListene
             drawerLayout.closeDrawer(GravityCompat.START);
 
         }else{
-            super.onBackPressed();
+            startActivity(new Intent(sampleNavi.this, createProfileActivity.class));
+            overridePendingTransition(0, 0);
         }
     }
 

@@ -24,6 +24,7 @@ public class leg_day_19_exer5 extends AppCompatActivity implements View.OnClickL
         btnFinish.setOnClickListener(this);
         btnBack = findViewById(R.id.leg_d19_btn_back5);
         btnBack.setOnClickListener(this);
+        SharedPreferencesHelper.initialize(this);
     }
     @Override
     public void onClick(View v) {
@@ -32,6 +33,8 @@ public class leg_day_19_exer5 extends AppCompatActivity implements View.OnClickL
             overridePendingTransition(0, 0);
         }
         else if(v == btnFinish){
+            SharedPreferencesHelper.setValue("Key_d19_legs", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(new Intent(leg_day_19_exer5.this, legs_page.class));
             overridePendingTransition(0, 0);
         }

@@ -37,6 +37,7 @@ public class day_4_exer5 extends AppCompatActivity implements View.OnClickListen
         }
         else if(btn_id == R.id.d4_btn_finish1){
             SharedPreferencesHelper.setValue("Key_d4_fbody", R.drawable.bg_rounded_rectangle);
+            SharedPreferencesHelper.incrementValue();
             startActivity(new Intent(day_4_exer5.this, fullbody_page.class));
             overridePendingTransition(0, 0);
         }

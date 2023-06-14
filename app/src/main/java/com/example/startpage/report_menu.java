@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class report_menu extends AppCompatActivity {
 
-    private TextView completes;
+    private TextView completes, bmi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,9 +17,20 @@ public class report_menu extends AppCompatActivity {
         getSupportActionBar().setTitle("Reports");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        Intent intent = getIntent();
-        int getCount = intent.getIntExtra("count", 0);
         completes = findViewById(R.id.tvCompletes);
-        completes.setText(String.valueOf(getCount));
+        bmi = findViewById(R.id.tv_bmi);
+        SharedPreferencesHelper.initialize(this);
+        setCompletes();
+        setBMI();
+
+    }
+    private void setCompletes(){
+        int receivedValue = SharedPreferencesHelper.getIncrementedValue(this);
+        // Display the value in the TextView
+        completes.setText(String.valueOf(receivedValue));
+    }
+    private void setBMI(){
+        String display_bmi = SharedPreferencesHelper.displayText("bmi", "");
+        bmi.setText(display_bmi);
     }
 }
